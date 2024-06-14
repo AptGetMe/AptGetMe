@@ -3,7 +3,7 @@
 - I’m interested in the QT framework written in the C++ or Python languages.
 - I also do a some TypeScript, Bash, SDL framework, SFML framework and a little of everything else.
 
->[!NOTE] Fun with Bash. 
+>[!NOTE]   
 >My plan for the future is to fill this repository with fun (and maybe useful) bash scripts.
 
 
