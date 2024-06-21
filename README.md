@@ -1,15 +1,17 @@
 # About the APTGETME Repo
 - Hi, I’m @AptGetMe, the maintainer.
-- I’m interested in the QT framework written in the C++ or Python languages.
-- I also do a some TypeScript, Bash, SDL framework, SFML framework and a little of everything else.
+- I’m interested in the QT framework apps written in both C++ or Python languages.
+- I have also tried some JavaScript, Bash, SDL framework, SFML framework and a little of everything else.  
 
 >[!NOTE]   
 >My plan for the future is to fill this repository with fun (and maybe useful) bash scripts.
 
 
-# CLI Weather
-A command line interface weather tool (like [wthrr](https://github.com/ttytm/wthrr-the-weathercrab), or [wego](https://github.com/schachmat/wego) 
-but with a view like [neofetch](https://github.com/dylanaraps/neofetch)). 
+## CLI Weather  ⛅
+A Command Line Interface **(CLI)** weather tool similar to [wthrr](https://github.com/ttytm/wthrr-the-weathercrab) or [wego](https://github.com/schachmat/wego) 
+but with a view like [neofetch](https://github.com/dylanaraps/neofetch). 
+
+Currently under development...
   
 <!---
 AptGetMe/AptGetMe is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
