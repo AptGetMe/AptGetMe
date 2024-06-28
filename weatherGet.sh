@@ -40,8 +40,14 @@ esac
 echo -n "Here's todays weather report "
 echo "$_weekDay $_month $_day, $_year:"
 
+# create tmp file and setup clean up on exit
+_tmpFile=$(mktemp)
+
 # start "inxi" cmd in background to get weather
-inxi -xxxw &
+# and redirect output to tmp file
+inxi -xxxw &>$_tmpFile &
+
+# save PID and setup kill signal handling
 _inxiPID=$!
 trap "kill $_inxiPID" SIGINT
 echo "Starting inxi weather process $_inxiPID"
