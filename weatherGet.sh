@@ -40,5 +40,10 @@ esac
 echo -n "Here's todays weather report "
 echo "$_weekDay $_month $_day, $_year:"
 
-# get weather using "inxi" cmd
-inxi -xxxw
+# start "inxi" cmd in background to get weather
+inxi -xxxw &
+_inxiPID=$!
+trap "kill $_inxiPID" SIGINT
+echo "Starting inxi weather process $_inxiPID"
+
+wait $_inxiPID
