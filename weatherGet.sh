@@ -42,6 +42,7 @@ echo "$_weekDay $_month $_day, $_year:"
 
 # create tmp file and setup clean up on exit
 _tmpFile=$(mktemp)
+trap "rm -f $_tmpFile" EXIT
 
 # start "inxi" cmd in background to get weather
 # and redirect output to tmp file
@@ -53,3 +54,7 @@ trap "kill $_inxiPID" SIGINT
 echo "Starting inxi weather process $_inxiPID"
 
 wait $_inxiPID
+
+# read and output inxi weather results from tmpFile
+_inxiResults=$(<$_tmpFile)
+echo "$_inxiResults"
