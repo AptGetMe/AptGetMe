@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # get current date with "date" cmd and store as array
-_fullDate=($(date))
+read -ra _fullDate < <(date)
 
 # extract date info
 _weekDay=${_fullDate[0]}
@@ -42,19 +42,19 @@ echo "$_weekDay $_month $_day, $_year:"
 
 # create tmp file and setup clean up on exit
 _tmpFile=$(mktemp)
-trap "rm -f $_tmpFile" EXIT
+trap 'rm -f $_tmpFile' EXIT
 
 # start "inxi" cmd in background to get weather
 # and redirect output to tmp file
-inxi -xxxw &>$_tmpFile &
+inxi -xxxw &>"$_tmpFile" &
 
 # save PID and setup kill signal handling
 _inxiPID=$!
-trap "kill $_inxiPID" SIGINT
+trap 'kill $_inxiPID' SIGINT
 echo "Starting inxi weather process $_inxiPID"
 
 wait $_inxiPID
 
 # read and output inxi weather results from tmpFile
-_inxiResults=$(<$_tmpFile)
+_inxiResults=$(<"$_tmpFile")
 echo "$_inxiResults"
