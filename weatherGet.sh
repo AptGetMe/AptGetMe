@@ -37,16 +37,16 @@ case $_weekDay in
 esac
 
 # print date
-echo -n "Here's todays weather report "
-echo "$_weekDay $_month $_day, $_year:"
+echo "Here's todays weather report $_weekDay $_month $_day, $_year:"
 
 # create tmp file and setup clean up on exit
 _tmpFile=$(mktemp)
 trap 'rm -f $_tmpFile' EXIT
 
 # start "inxi" cmd in background to get weather
-# and redirect output to tmp file
-inxi -xxxw &>"$_tmpFile" &
+# pipe output to tee command to write to tmp file
+# remove stdout 
+inxi -xxxw --force colors | tee "$_tmpFile" >/dev/null &
 
 # save PID and setup kill signal handling
 _inxiPID=$!
