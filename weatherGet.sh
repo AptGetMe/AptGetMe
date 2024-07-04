@@ -36,6 +36,45 @@ case $_weekDay in
     ;;
 esac
 
+#convert to long month
+case $_month in
+  "Jan")
+    _month="January"
+    ;;
+  "Feb")
+    _month="February"
+    ;;
+  "Mar")
+    _month="March"
+    ;;
+  "Apr")
+    _month="April"
+    ;;
+  "Jun")
+    _month="June"
+    ;;
+  "Jul")
+    _month="July"
+    ;;
+  "Aug")
+    _month="August"
+    ;;
+  "Sep")
+    _month="September"
+    ;;
+  "Oct")
+    _month="October"
+    ;;
+  "Nov")
+    _month="November"
+    ;;
+  "Dec")
+    _month="December"
+    ;;
+  *)
+    ;;
+esac
+
 # print date
 echo "Here's todays weather report $_weekDay $_month $_day, $_year:"
 
