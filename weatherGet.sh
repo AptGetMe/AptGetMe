@@ -92,7 +92,29 @@ _inxiPID=$!
 trap 'kill $_inxiPID' SIGINT
 echo "Starting inxi weather process $_inxiPID"
 
-wait $_inxiPID
+while ps -p $_inxiPID >/dev/null;
+do
+    sleep 0.1
+    echo -en "|\b"
+    sleep 0.1
+    echo -en "/\b"
+    sleep 0.1
+    echo -en "-\b"
+    sleep 0.1
+    echo -en "\\\\\b"
+    sleep 0.1
+    echo -en "|\b"
+    sleep 0.1
+    echo -en "/\b"
+    sleep 0.1
+    echo -en "-\b"
+    sleep 0.1
+    echo -en "\\\\\b"
+    sleep 0.1
+    echo -en "|\b"
+    echo -n "*"
+done
+echo -e "\nFinished\n"
 
 # read and output inxi weather results from tmpFile
 _inxiResults=$(<"$_tmpFile")
