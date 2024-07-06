@@ -1,22 +1,34 @@
 #!/bin/bash
 
+# define global colors
+_yellow_BOLD_FG="\033[1;38;5;226m"
+_orange_BOLD_FG="\033[1;38;5;214m"
+
+_sky1_BG="\033[48;5;105m"
+_sky2_BG="\033[48;5;69m"
+_sky3_BG="\033[48;5;33m"
+_sky4_BG="\033[48;5;21m"
+
+_colorEnd="\033[m"
+
+
 function sunny()
 {                                                        
-  echo "               ++               "
-  echo "       ++     ++++     ++       "
-  echo "       +++++ ++++++ +++++       "
-  echo "        +++++      +++++        "
-  echo "        ++  ;;;;;;;;  ++        "
-  echo "  +++++++ ;;;;;;;;;;;; +++++++  "
-  echo "    ++++ ;;;;;;;;;;;;;; ++++    "
-  echo "      ++ ;;;;;;;;;;;;;; ++      "
-  echo "    ++++ ;;;;;;;;;;;;;; ++++    "
-  echo "  +++++++ ;;;;;;;;;;;; +++++++  "
-  echo "        ++  ;;;;;;;;  ++        "
-  echo "        +++++      +++++        "
-  echo "       +++++ ++++++ +++++       "
-  echo "       ++     ++++     ++       "
-  echo "               ++               "
+  echo -e "$_yellow_BOLD_FG               ++               $_colorEnd"
+  echo -e "$_yellow_BOLD_FG       ++     ++++     ++       $_colorEnd"
+  echo -e "$_yellow_BOLD_FG       +++++ ++++++ +++++       $_colorEnd"
+  echo -e "$_yellow_BOLD_FG        +++++      +++++        $_colorEnd"
+  echo -e "$_yellow_BOLD_FG        ++$_orange_BOLD_FG  ;;;;;;;;$_yellow_BOLD_FG  ++        $_colorEnd"
+  echo -e "$_yellow_BOLD_FG  +++++++$_orange_BOLD_FG ;;;;;;;;;;;;$_yellow_BOLD_FG +++++++  $_colorEnd"
+  echo -e "$_yellow_BOLD_FG    ++++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++++    $_colorEnd"
+  echo -e "$_yellow_BOLD_FG      ++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++      $_colorEnd"
+  echo -e "$_yellow_BOLD_FG    ++++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++++    $_colorEnd"
+  echo -e "$_yellow_BOLD_FG  +++++++$_orange_BOLD_FG ;;;;;;;;;;;;$_yellow_BOLD_FG +++++++  $_colorEnd"
+  echo -e "$_yellow_BOLD_FG        ++$_orange_BOLD_FG  ;;;;;;;;$_yellow_BOLD_FG  ++        $_colorEnd"
+  echo -e "$_yellow_BOLD_FG        +++++      +++++        $_colorEnd"
+  echo -e "$_yellow_BOLD_FG       +++++ ++++++ +++++       $_colorEnd"
+  echo -e "$_yellow_BOLD_FG       ++     ++++     ++       $_colorEnd"
+  echo -e "$_yellow_BOLD_FG               ++               $_colorEnd"
 }
 function partly_sunny
 {                            
