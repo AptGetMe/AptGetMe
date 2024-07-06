@@ -1,5 +1,43 @@
 #!/bin/bash
 
+function sunny()
+{                                                        
+  echo "               ++               "
+  echo "       ++     ++++     ++       "
+  echo "       +++++ ++++++ +++++       "
+  echo "        +++++      +++++        "
+  echo "        ++  ;;;;;;;;  ++        "
+  echo "  +++++++ ;;;;;;;;;;;; +++++++  "
+  echo "    ++++ ;;;;;;;;;;;;;; ++++    "
+  echo "      ++ ;;;;;;;;;;;;;; ++      "
+  echo "    ++++ ;;;;;;;;;;;;;; ++++    "
+  echo "  +++++++ ;;;;;;;;;;;; +++++++  "
+  echo "        ++  ;;;;;;;;  ++        "
+  echo "        +++++      +++++        "
+  echo "       +++++ ++++++ +++++       "
+  echo "       ++     ++++     ++       "
+  echo "               ++               "
+}
+function partly_sunny
+{                            
+  echo "               ++               "
+  echo "       ++     ++++     ++       "
+  echo "       +++++ ++++++ +++++       "
+  echo "        +++++      ++++++       "
+  echo "        ++  ;;;;;;;;; ++        "
+  echo "  +++++++ ;;;;;;;;;;;; +++++++  "
+  echo "    ++++ ;;;;;;;;;;;;;; ++++    "
+  echo "      ++ ;;;;;;;;;;;;;; ++      "
+  echo "    ++++ ;;;;;;;;;;;;;; ++++    "
+  echo "  +++++++ ;;;;;;;;;;;; +++++++  "
+  echo "     ++....++;;;;;;;  ++        "
+  echo "   ++........+;+++ ++++++       "
+  echo " +++;............++ +++++       "
+  echo " +...............:+    ++       "
+  echo " +;.............:+              "
+  echo "   +++++++++++++                "
+}
+
 # get current date with "date" cmd and store as array
 read -ra _fullDate < <(date)
 
@@ -92,6 +130,7 @@ _inxiPID=$!
 trap 'kill $_inxiPID' SIGINT
 echo "Starting inxi weather process $_inxiPID"
 
+# while waiting for inxi cmd to exit, play ascii animation
 while ps -p $_inxiPID >/dev/null;
 do
     sleep 0.1
@@ -114,8 +153,12 @@ do
     echo -en "|\b"
     echo -n "*"
 done
-echo -e "\nFinished\n"
+echo -e "\nFinished"
 
 # read and output inxi weather results from tmpFile
 _inxiResults=$(<"$_tmpFile")
-echo "$_inxiResults"
+echo "$_inxiResults"                              
+
+# test out ascii art for weather results
+sunny
+partly_sunny
