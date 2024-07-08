@@ -1,4 +1,8 @@
 #!/bin/bash
+# Weather_CLI Version 0.1 by AptGetMe 2024
+
+# define version
+_version="0.1"
 
 # define global colors
 _yellow_BOLD_FG="\033[1;38;5;226m"
