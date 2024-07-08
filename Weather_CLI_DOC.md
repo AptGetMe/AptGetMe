@@ -15,7 +15,7 @@ This file contains some instructions that should help you install and use **Weat
 - Click on the *weather-cli* file
 - Click on the *Download raw file* button
 - Right click on downloaded *weather-cli* file and allow execution permissions
- - Open a terminal and navigate to folder containing the downloaded *weatherGet.sh* file.
+ - Open a terminal and navigate to folder containing the downloaded *weather-cli* file.
  - Run script ```./weather-cli```
 
 
