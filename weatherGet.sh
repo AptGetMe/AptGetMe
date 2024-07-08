@@ -3,6 +3,8 @@
 # define global colors
 _yellow_BOLD_FG="\033[1;38;5;226m"
 _orange_BOLD_FG="\033[1;38;5;214m"
+_grey_BOLD_FG="\033[1;38;5;248m"
+_white_BOLD_FG="\033[1;38;5;255m"
 
 _sky1_BG="\033[48;5;105m"
 _sky2_BG="\033[48;5;69m"
@@ -32,22 +34,22 @@ function sunny()
 }
 function partly_sunny
 {                            
-  echo "               ++               "
-  echo "       ++     ++++     ++       "
-  echo "       +++++ ++++++ +++++       "
-  echo "        +++++      ++++++       "
-  echo "        ++  ;;;;;;;;; ++        "
-  echo "  +++++++ ;;;;;;;;;;;; +++++++  "
-  echo "    ++++ ;;;;;;;;;;;;;; ++++    "
-  echo "      ++ ;;;;;;;;;;;;;; ++      "
-  echo "    ++++ ;;;;;;;;;;;;;; ++++    "
-  echo "  +++++++ ;;;;;;;;;;;; +++++++  "
-  echo "     ++....++;;;;;;;  ++        "
-  echo "   ++........+;+++ ++++++       "
-  echo " +++;............++ +++++       "
-  echo " +...............:+    ++       "
-  echo " +;.............:+              "
-  echo "   +++++++++++++                "
+  echo -e "$_yellow_BOLD_FG               ++               $_colorEnd"
+  echo -e "$_yellow_BOLD_FG       ++     ++++     ++       $_colorEnd"
+  echo -e "$_yellow_BOLD_FG       +++++ ++++++ +++++       $_colorEnd"
+  echo -e "$_yellow_BOLD_FG        +++++      ++++++       $_colorEnd"
+  echo -e "$_yellow_BOLD_FG        ++$_orange_BOLD_FG  ;;;;;;;;;$_yellow_BOLD_FG ++        $_colorEnd"
+  echo -e "$_yellow_BOLD_FG  +++++++$_orange_BOLD_FG ;;;;;;;;;;;;$_yellow_BOLD_FG +++++++  $_colorEnd"
+  echo -e "$_yellow_BOLD_FG    ++++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++++    $_colorEnd"
+  echo -e "$_yellow_BOLD_FG      ++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++      $_colorEnd"
+  echo -e "$_yellow_BOLD_FG    ++++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++++    $_colorEnd"
+  echo -e "$_yellow_BOLD_FG  +++++++$_orange_BOLD_FG ;;;;;;;;;;;;$_yellow_BOLD_FG +++++++  $_colorEnd"
+  echo -e "$_grey_BOLD_FG     ++$_white_BOLD_FG....$_grey_BOLD_FG++$_orange_BOLD_FG;;;;;;;$_yellow_BOLD_FG  ++        $_colorEnd"
+  echo -e "$_grey_BOLD_FG   ++$_white_BOLD_FG........$_grey_BOLD_FG+;++$_yellow_BOLD_FG+ ++++++       $_colorEnd"
+  echo -e "$_grey_BOLD_FG +++;$_white_BOLD_FG............$_grey_BOLD_FG++$_yellow_BOLD_FG +++++       $_colorEnd"
+  echo -e "$_grey_BOLD_FG +$_white_BOLD_FG...............$_grey_BOLD_FG:+$_yellow_BOLD_FG    ++       $_colorEnd"
+  echo -e "$_grey_BOLD_FG +;$_white_BOLD_FG.............$_grey_BOLD_FG:+              $_colorEnd"
+  echo -e "$_grey_BOLD_FG   +++++++++++++                $_colorEnd"
 }
 
 # get current date with "date" cmd and store as array
@@ -142,14 +144,13 @@ _inxiPID=$!
 trap 'kill $_inxiPID' SIGINT
 echo "Starting inxi weather process $_inxiPID"
 
-# while waiting for inxi cmd to exit, play ascii animation
+# turn cursor shape to steady underline
+echo -ne "\e[4 q"
+
+# while waiting for inxi cmd to exit, play ASCII animation
 while ps -p $_inxiPID >/dev/null;
 do
     sleep 0.1
-    echo -en "|\b"
-    sleep 0.1
-    echo -en "/\b"
-    sleep 0.1
     echo -en "-\b"
     sleep 0.1
     echo -en "\\\\\b"
@@ -163,14 +164,22 @@ do
     echo -en "\\\\\b"
     sleep 0.1
     echo -en "|\b"
+    sleep 0.1
+    echo -en "/\b"
+    sleep 0.1
+    echo -en "-\b"
+    sleep 0.1
     echo -n "*"
 done
 echo -e "\nFinished"
+
+# restore cursor shape back to default
+echo -ne "\e[0 q"
 
 # read and output inxi weather results from tmpFile
 _inxiResults=$(<"$_tmpFile")
 echo "$_inxiResults"                              
 
-# test out ascii art for weather results
+# test out ASCII art for weather results
 sunny
 partly_sunny
