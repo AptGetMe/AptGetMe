@@ -184,8 +184,12 @@ echo -e "  |         Finished         |"
 echo -e "  ----------------------------$_colorEnd"
 
 # read and output inxi weather results from tmpFile
-_inxiResults=$(<"$_tmpFile")
-echo "$_inxiResults"                              
+mapfile -d ' ' _inxiResults < "$_tmpFile"
+
+for i in "${_inxiResults[@]}"
+do
+    echo "$i"
+done
 
 # test out ASCII art for weather results
-sunny
+# sunny
