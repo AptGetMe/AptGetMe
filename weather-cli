@@ -9,6 +9,7 @@ _yellow_BOLD_FG="\033[1;38;5;226m"
 _orange_BOLD_FG="\033[1;38;5;214m"
 _grey_BOLD_FG="\033[1;38;5;248m"
 _white_BOLD_FG="\033[1;38;5;255m"
+_green_BOLD_FG="\033[1;38;5;42m"
 
 _sky1_BG="\033[48;5;105m"
 _sky2_BG="\033[48;5;69m"
@@ -132,7 +133,7 @@ case $_month in
 esac
 
 # print date
-echo "Here's todays weather report $_weekDay $_month $_day, $_year:"
+echo "Gathering todays weather report $_weekDay $_month $_day, $_year:"
 
 # create tmp file and setup clean up on exit
 _tmpFile=$(mktemp)
@@ -154,6 +155,13 @@ echo -ne "\e[4 q"
 # while waiting for inxi cmd to exit, play ASCII animation
 while ps -p $_inxiPID >/dev/null;
 do
+    echo -en "$_green_BOLD_FG-\b"
+    sleep 0.1
+    echo -en "\\\\\b"
+    sleep 0.1
+    echo -en "|\b"
+    sleep 0.1
+    echo -en "/\b"
     sleep 0.1
     echo -en "-\b"
     sleep 0.1
@@ -165,20 +173,15 @@ do
     sleep 0.1
     echo -en "-\b"
     sleep 0.1
-    echo -en "\\\\\b"
-    sleep 0.1
-    echo -en "|\b"
-    sleep 0.1
-    echo -en "/\b"
-    sleep 0.1
-    echo -en "-\b"
-    sleep 0.1
-    echo -n "*"
+    echo -en "*$_colorEnd"
 done
-echo -e "\nFinished"
-
 # restore cursor shape back to default
 echo -ne "\e[0 q"
+
+clear
+echo -e "  $_green_BOLD_FG----------------------------"
+echo -e "  |         Finished         |"
+echo -e "  ----------------------------$_colorEnd"
 
 # read and output inxi weather results from tmpFile
 _inxiResults=$(<"$_tmpFile")
@@ -186,4 +189,3 @@ echo "$_inxiResults"
 
 # test out ASCII art for weather results
 sunny
-partly_sunny
