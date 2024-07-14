@@ -57,83 +57,9 @@ function partly_sunny
   echo -e "$_grey_BOLD_FG   +++++++++++++                $_colorEnd"
 }
 
-# get current date with "date" cmd and store as array
-read -ra _fullDate < <(date)
-
-# extract date info
-_weekDay=${_fullDate[0]}
-_month=${_fullDate[1]}
-_day=${_fullDate[2]}
-_year=${_fullDate[6]}
-
-# convert to long week day
-case $_weekDay in
-  "Mon")
-    _weekDay="Monday"
-    ;;
-  "Tue")
-    _weekDay="Tuesday"
-    ;;
-  "Wed")
-    _weekDay="Wednesday"
-    ;;
-  "Thu")
-    _weekDay="Thursday"
-    ;;
-  "Fri")
-    _weekDay="Friday"
-    ;;
-  "Sat")
-    _weekDay="Saturday"
-    ;;
-  "Sun")
-    _weekDay="Sunday"
-    ;;
-  *)
-    ;;
-esac
-
-#convert to long month
-case $_month in
-  "Jan")
-    _month="January"
-    ;;
-  "Feb")
-    _month="February"
-    ;;
-  "Mar")
-    _month="March"
-    ;;
-  "Apr")
-    _month="April"
-    ;;
-  "Jun")
-    _month="June"
-    ;;
-  "Jul")
-    _month="July"
-    ;;
-  "Aug")
-    _month="August"
-    ;;
-  "Sep")
-    _month="September"
-    ;;
-  "Oct")
-    _month="October"
-    ;;
-  "Nov")
-    _month="November"
-    ;;
-  "Dec")
-    _month="December"
-    ;;
-  *)
-    ;;
-esac
-
-# print date
-echo "Gathering todays weather report $_weekDay $_month $_day, $_year:"
+# get current date with "date" cmd and store in variable
+_fullDate=$(date '+%A %B %d, %Y')
+echo "Gathering todays weather report $_fullDate"
 
 # create tmp file and setup clean up on exit
 _tmpFile=$(mktemp)
