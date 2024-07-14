@@ -183,10 +183,20 @@ echo -e "  $_green_BOLD_FG----------------------------"
 echo -e "  |         Finished         |"
 echo -e "  ----------------------------$_colorEnd"
 
-# read and output inxi weather results from tmpFile
-mapfile -d ' ' _inxiResults < "$_tmpFile"
+# read inxi weather results from tmpFile, deliminate on spaces
+mapfile -d ' ' _inxiRaw < "$_tmpFile"
 
-for i in "${_inxiResults[@]}"
+# remove extra whitespaces and newlines
+_inxiPretty=()
+for _i in "${_inxiRaw[@]}"
+do
+    _line="$(echo "$_i" | xargs)"
+    if [[ $_line != "" ]]; then
+        _inxiPretty+=("$_line")
+    fi
+done
+
+for i in "${_inxiPretty[@]}"
 do
     echo "$i"
 done
