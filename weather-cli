@@ -39,7 +39,7 @@ function sunny()
         "$_yellow_BOLD_FG       ++     ++++     ++       $_colorEnd"
         "$_yellow_BOLD_FG               ++               $_colorEnd")
 }
-function partly_sunny
+function partly_sunny()
 {                            
   _out=("$_yellow_BOLD_FG               ++               $_colorEnd"
         "$_yellow_BOLD_FG       ++     ++++     ++       $_colorEnd"
@@ -107,16 +107,17 @@ done
 echo -ne "\e[0 q"
 
 clear
-echo -e "  $_green_BOLD_FG----------------------------"
-echo -e "  |         Finished         |"
-echo -e "  ----------------------------$_colorEnd"
+echo -e "  $_green_BOLD_FG----------------------------------------------------------"
+echo -e "  |                        Finished                        |"
+echo -e "  ----------------------------------------------------------$_colorEnd\n"
 
 # read inxi weather results from tmpFile, deliminate on spaces
 mapfile -d ' ' _inxiRaw < "$_tmpFile"
 
 # remove extra whitespaces and newlines
 _inxiPretty=()
-for _i in "${_inxiRaw[@]}"
+for _i in "${_inxiRaw[@]}"_out[0]="${_out[0]/%/"    ${_inxiPretty[0]} ${_inxiPretty[1]}"}"
+
 do
     _line="$(echo "$_i" | xargs)"
     if [[ $_line != "" ]]; then
@@ -124,10 +125,14 @@ do
     fi
 done
 
-for i in "${_inxiPretty[@]}"
-do
-    echo "$i"
-done
-
 # test out ASCII art for weather results
-# sunny
+sunny
+
+_out[0]="${_out[0]/%/"    ${_inxiPretty[0]} ${_inxiPretty[1]}"}"
+_out[1]="${_out[1]/%/"    ${_inxiPretty[2]} ${_inxiPretty[3]} ${_inxiPretty[4]} ${_inxiPretty[5]} ${_inxiPretty[6]}"}"
+_out[2]="${_out[2]/%/"    ${_inxiPretty[7]} ${_inxiPretty[8]} ${_inxiPretty[9]}"}"
+
+for i in "${_out[@]}"
+do
+    echo -e "$i"
+done
