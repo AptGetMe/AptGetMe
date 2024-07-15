@@ -18,43 +18,45 @@ _sky4_BG="\033[48;5;21m"
 
 _colorEnd="\033[m"
 
+# global array to hold final output to screen
+_out=()
 
 function sunny()
 {                                                        
-  echo -e "$_yellow_BOLD_FG               ++               $_colorEnd"
-  echo -e "$_yellow_BOLD_FG       ++     ++++     ++       $_colorEnd"
-  echo -e "$_yellow_BOLD_FG       +++++ ++++++ +++++       $_colorEnd"
-  echo -e "$_yellow_BOLD_FG        +++++      +++++        $_colorEnd"
-  echo -e "$_yellow_BOLD_FG        ++$_orange_BOLD_FG  ;;;;;;;;$_yellow_BOLD_FG  ++        $_colorEnd"
-  echo -e "$_yellow_BOLD_FG  +++++++$_orange_BOLD_FG ;;;;;;;;;;;;$_yellow_BOLD_FG +++++++  $_colorEnd"
-  echo -e "$_yellow_BOLD_FG    ++++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++++    $_colorEnd"
-  echo -e "$_yellow_BOLD_FG      ++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++      $_colorEnd"
-  echo -e "$_yellow_BOLD_FG    ++++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++++    $_colorEnd"
-  echo -e "$_yellow_BOLD_FG  +++++++$_orange_BOLD_FG ;;;;;;;;;;;;$_yellow_BOLD_FG +++++++  $_colorEnd"
-  echo -e "$_yellow_BOLD_FG        ++$_orange_BOLD_FG  ;;;;;;;;$_yellow_BOLD_FG  ++        $_colorEnd"
-  echo -e "$_yellow_BOLD_FG        +++++      +++++        $_colorEnd"
-  echo -e "$_yellow_BOLD_FG       +++++ ++++++ +++++       $_colorEnd"
-  echo -e "$_yellow_BOLD_FG       ++     ++++     ++       $_colorEnd"
-  echo -e "$_yellow_BOLD_FG               ++               $_colorEnd"
+  _out=("$_yellow_BOLD_FG               ++               $_colorEnd"
+        "$_yellow_BOLD_FG       ++     ++++     ++       $_colorEnd"
+        "$_yellow_BOLD_FG       +++++ ++++++ +++++       $_colorEnd"
+        "$_yellow_BOLD_FG        +++++      +++++        $_colorEnd"
+        "$_yellow_BOLD_FG        ++$_orange_BOLD_FG  ;;;;;;;;$_yellow_BOLD_FG  ++        $_colorEnd"
+        "$_yellow_BOLD_FG  +++++++$_orange_BOLD_FG ;;;;;;;;;;;;$_yellow_BOLD_FG +++++++  $_colorEnd"
+        "$_yellow_BOLD_FG    ++++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++++    $_colorEnd"
+        "$_yellow_BOLD_FG      ++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++      $_colorEnd"
+        "$_yellow_BOLD_FG    ++++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++++    $_colorEnd"
+        "$_yellow_BOLD_FG  +++++++$_orange_BOLD_FG ;;;;;;;;;;;;$_yellow_BOLD_FG +++++++  $_colorEnd"
+        "$_yellow_BOLD_FG        ++$_orange_BOLD_FG  ;;;;;;;;$_yellow_BOLD_FG  ++        $_colorEnd"
+        "$_yellow_BOLD_FG        +++++      +++++        $_colorEnd"
+        "$_yellow_BOLD_FG       +++++ ++++++ +++++       $_colorEnd"
+        "$_yellow_BOLD_FG       ++     ++++     ++       $_colorEnd"
+        "$_yellow_BOLD_FG               ++               $_colorEnd")
 }
 function partly_sunny
 {                            
-  echo -e "$_yellow_BOLD_FG               ++               $_colorEnd"
-  echo -e "$_yellow_BOLD_FG       ++     ++++     ++       $_colorEnd"
-  echo -e "$_yellow_BOLD_FG       +++++ ++++++ +++++       $_colorEnd"
-  echo -e "$_yellow_BOLD_FG        +++++      ++++++       $_colorEnd"
-  echo -e "$_yellow_BOLD_FG        ++$_orange_BOLD_FG  ;;;;;;;;;$_yellow_BOLD_FG ++        $_colorEnd"
-  echo -e "$_yellow_BOLD_FG  +++++++$_orange_BOLD_FG ;;;;;;;;;;;;$_yellow_BOLD_FG +++++++  $_colorEnd"
-  echo -e "$_yellow_BOLD_FG    ++++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++++    $_colorEnd"
-  echo -e "$_yellow_BOLD_FG      ++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++      $_colorEnd"
-  echo -e "$_yellow_BOLD_FG    ++++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++++    $_colorEnd"
-  echo -e "$_yellow_BOLD_FG  +++++++$_orange_BOLD_FG ;;;;;;;;;;;;$_yellow_BOLD_FG +++++++  $_colorEnd"
-  echo -e "$_grey_BOLD_FG     ++$_white_BOLD_FG....$_grey_BOLD_FG++$_orange_BOLD_FG;;;;;;;$_yellow_BOLD_FG  ++        $_colorEnd"
-  echo -e "$_grey_BOLD_FG   ++$_white_BOLD_FG........$_grey_BOLD_FG+;++$_yellow_BOLD_FG+ ++++++       $_colorEnd"
-  echo -e "$_grey_BOLD_FG +++;$_white_BOLD_FG............$_grey_BOLD_FG++$_yellow_BOLD_FG +++++       $_colorEnd"
-  echo -e "$_grey_BOLD_FG +$_white_BOLD_FG...............$_grey_BOLD_FG:+$_yellow_BOLD_FG    ++       $_colorEnd"
-  echo -e "$_grey_BOLD_FG +;$_white_BOLD_FG.............$_grey_BOLD_FG:+              $_colorEnd"
-  echo -e "$_grey_BOLD_FG   +++++++++++++                $_colorEnd"
+  _out=("$_yellow_BOLD_FG               ++               $_colorEnd"
+        "$_yellow_BOLD_FG       ++     ++++     ++       $_colorEnd"
+        "$_yellow_BOLD_FG       +++++ ++++++ +++++       $_colorEnd"
+        "$_yellow_BOLD_FG        +++++      ++++++       $_colorEnd"
+        "$_yellow_BOLD_FG        ++$_orange_BOLD_FG  ;;;;;;;;;$_yellow_BOLD_FG ++        $_colorEnd"
+        "$_yellow_BOLD_FG  +++++++$_orange_BOLD_FG ;;;;;;;;;;;;$_yellow_BOLD_FG +++++++  $_colorEnd"
+        "$_yellow_BOLD_FG    ++++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++++    $_colorEnd"
+        "$_yellow_BOLD_FG      ++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++      $_colorEnd"
+        "$_yellow_BOLD_FG    ++++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++++    $_colorEnd"
+        "$_yellow_BOLD_FG  +++++++$_orange_BOLD_FG ;;;;;;;;;;;;$_yellow_BOLD_FG +++++++  $_colorEnd"
+        "$_grey_BOLD_FG     ++$_white_BOLD_FG....$_grey_BOLD_FG++$_orange_BOLD_FG;;;;;;;$_yellow_BOLD_FG  ++        $_colorEnd"
+        "$_grey_BOLD_FG   ++$_white_BOLD_FG........$_grey_BOLD_FG+;++$_yellow_BOLD_FG+ ++++++       $_colorEnd"
+        "$_grey_BOLD_FG +++;$_white_BOLD_FG............$_grey_BOLD_FG++$_yellow_BOLD_FG +++++       $_colorEnd"
+        "$_grey_BOLD_FG +$_white_BOLD_FG...............$_grey_BOLD_FG:+$_yellow_BOLD_FG    ++       $_colorEnd"
+        "$_grey_BOLD_FG +;$_white_BOLD_FG.............$_grey_BOLD_FG:+              $_colorEnd"
+        "$_grey_BOLD_FG   +++++++++++++                $_colorEnd")
 }
 
 # get current date with "date" cmd and store in variable
