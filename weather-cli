@@ -116,8 +116,7 @@ mapfile -d ' ' _inxiRaw < "$_tmpFile"
 
 # remove extra whitespaces and newlines
 _inxiPretty=()
-for _i in "${_inxiRaw[@]}"_out[0]="${_out[0]/%/"    ${_inxiPretty[0]} ${_inxiPretty[1]}"}"
-
+for _i in "${_inxiRaw[@]}"
 do
     _line="$(echo "$_i" | xargs)"
     if [[ $_line != "" ]]; then
@@ -125,14 +124,29 @@ do
     fi
 done
 
+# debug code to see array of weather output
+#for _i in "${!_inxiPretty[@]}"
+#do
+#    echo "$_i ${_inxiPretty[_i]}"
+#done
+
 # test out ASCII art for weather results
 sunny
 
-_out[0]="${_out[0]/%/"    ${_inxiPretty[0]} ${_inxiPretty[1]}"}"
-_out[1]="${_out[1]/%/"    ${_inxiPretty[2]} ${_inxiPretty[3]} ${_inxiPretty[4]} ${_inxiPretty[5]} ${_inxiPretty[6]}"}"
-_out[2]="${_out[2]/%/"    ${_inxiPretty[7]} ${_inxiPretty[8]} ${_inxiPretty[9]}"}"
-
-for i in "${_out[@]}"
-do
-    echo -e "$i"
-done
+# test out formating the final results
+echo -e "${_out[0]}    ${_inxiPretty[0]} ${_inxiPretty[1]}"
+echo -e "${_out[1]}    ${_inxiPretty[2]} ${_inxiPretty[5]} ${_inxiPretty[6]}"
+echo -e "${_out[2]}    ${_inxiPretty[7]} ${_inxiPretty[8]} ${_inxiPretty[9]}"
+echo -e "${_out[3]}    ${_inxiPretty[10]} ${_inxiPretty[11]} ${_inxiPretty[12]} ${_inxiPretty[13]} ${_inxiPretty[18]} ${_inxiPretty[19]}"
+echo -e "${_out[4]}    ${_inxiPretty[20]} ${_inxiPretty[21]} ${_inxiPretty[22]}"
+echo -e "${_out[5]}    ${_inxiPretty[23]} ${_inxiPretty[24]}"
+echo -e "${_out[6]}    ${_inxiPretty[25]} ${_inxiPretty[28]} ${_inxiPretty[29]}"
+echo -e "${_out[7]}    ${_inxiPretty[30]} ${_inxiPretty[31]} ${_inxiPretty[32]} ${_inxiPretty[33]}"
+echo -e "${_out[8]}    ${_inxiPretty[45]} ${_inxiPretty[46]} ${_inxiPretty[47]} ${_inxiPretty[48]} ${_inxiPretty[49]} ${_inxiPretty[50]}"
+echo -e "${_out[9]}    ${_inxiPretty[54]} ${_inxiPretty[55]}"
+echo -e "${_out[10]}    ${_inxiPretty[56]} ${_inxiPretty[57]}"
+echo -e "${_out[11]}    ${_inxiPretty[58]} ${_inxiPretty[59]}"
+echo -e "${_out[12]}"
+echo -e "${_out[13]}"
+echo -e "${_out[14]}"
+echo -e "${_out[15]}"
