@@ -1,0 +1,11 @@
+<svg width="230" height="80" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <g id="Layer_1">
+  <title>Layer 1</title>
+  <rect stroke="#ffffff" fill="#333854" x="7.25996" y="7.2955" width="213.20497" height="65.73036" id="svg_1" stroke-width="3" rx="18"/>
+  <path fill="#333854" stroke-width="4" opacity="NaN" d="m21.22671,28.49904l21.80388,-14.26261l21.03639,14.44916c-0.09689,7.34432 0.05824,15.76028 -0.03865,23.10461l-20.99773,14.75441l-22.00879,-14.16462l-0.0992,-11.40793l0.30411,-12.47302z" id="svg_6" stroke="#ffffff"/>
+  <text fill="#ffffff" stroke-width="0" x="90.1905" y="45.36222" id="svg_8" font-size="24" font-family="'Antonio'" text-anchor="start" xml:space="preserve" stroke="#ffffff" transform="matrix(1.43459 0 0 1 -51.5396 0.986842)">AptGetMe</text>
+  <path id="svg_2" d="m70.84477,53.66022l132.27077,0" opacity="undefined" stroke-width="3" stroke="#ffffff" fill="none"/>
+  <text transform="matrix(1.46256 0 0 1.13189 -33.517 -8.16539)" stroke="null" stroke-width="0" xml:space="preserve" text-anchor="start" font-family="'Antonio'" font-size="24" id="svg_3" y="50.89522" x="43.44426" fill="#56ff56">$_</text>
+ </g>
+
+</svg>

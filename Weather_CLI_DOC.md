@@ -1,7 +1,7 @@
 <div align="center">
 
 # Weather_CLI
-<img src="https://github.com/user-attachments/assets/4c2c31c5-485e-4b80-b3dc-e0b4830ad39b" alt="Weather-CLI" style="width:400px;height:auto;">
+<img src="./assets/Weather-CLI.svg" alt="Weather-CLI" style="width:250px;height:auto;">
 
 A Command Line Interface **(CLI)** weather tool similar to [wthrr](https://github.com/ttytm/wthrr-the-weathercrab) or [wego](https://github.com/schachmat/wego) but with a view like [neofetch](https://github.com/dylanaraps/neofetch). 
 

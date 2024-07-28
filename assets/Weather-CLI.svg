@@ -1,0 +1,18 @@
+<svg width="500" height="400" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_1" fill=" rgb(224, 224, 224)" stroke=" rgb(0, 0, 0)" height="109.082" width="238.658" y="172.671" x="103.274"/>
+  <rect id="svg_2" fill=" rgb(224, 224, 224)" height="52.227" width="121.643" y="144.244" x="125.752"/>
+  <path id="svg_3" fill=" rgb(224, 224, 224)" stroke=" rgb(180, 180, 180)" stroke-linejoin=" round" stroke-linecap=" round" d="m304.736,162.198c21.924,-4.053 46.426,-2.779 69.283,5.694c29.152,10.807 50.389,32.763 50.389,54.378c0,33.413 -24.079,57.856 -98.592,60.5" stroke-width="20"/>
+  <path id="svg_4" fill=" rgb(224, 224, 224)" stroke=" rgb(181, 181, 181)" stroke-linecap=" round" stroke-width="20" d="m132,123.24c0,-49.446 40.084,-89.53 89.53,-89.53c49.446,0 89.53,40.084 89.53,89.53c0,31.433 -16.198,59.082 -40.703,75.056"/>
+  <path id="svg_5" fill=" rgb(224, 224, 224)" stroke=" rgb(183, 183, 183)" stroke-linecap=" round" stroke-width="20" d="m111.01,282.77c-43.912,0 -79.51,-35.598 -79.51,-79.51c0,-43.912 35.598,-79.51 79.51,-79.51c30.705,0 57.344,17.405 70.591,42.886"/>
+  <line id="svg_6" stroke=" rgb(180, 180, 180)" stroke-width="20" y2="282.77" x2="328.734" y1="282.77" x1="107.704"/>
+  <line id="svg_7" stroke-linecap="round" stroke-width="13" stroke="#f8ff86ff" y2="21.44" x2="364.5" y1="102.25" x1="339.5"/>
+  <line id="svg_8" stroke=" rgb(255, 240, 134)" stroke-width="13" stroke-linecap="round" y2="57.75" x2="437.5" y1="116.75" x1="360.5"/>
+  <line id="svg_9" stroke=" rgb(255, 223, 134)" stroke-linecap="round" stroke-width="13" y2="126.25" x2="464.5" y1="137.25" x1="376.5"/>
+  <line id="svg_10" stroke-linecap="round" stroke-width="16" stroke="#8691ffff" y2="305.84" x2="72" y1="360.66" x1="40"/>
+  <line id="svg_11" stroke=" rgb(123, 134, 240)" stroke-linecap="round" stroke-width="16" y2="306.84" x2="196.5" y1="361.66" x1="164.5"/>
+  <line id="svg_12" stroke=" rgb(119, 129, 232)" stroke-linecap="round" stroke-width="16" y2="305.84" x2="318.75" y1="360.66" x1="286.75"/>
+ </g>
+</svg>

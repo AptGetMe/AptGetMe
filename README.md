@@ -1,4 +1,11 @@
+<div align="center">
+
 # About the APTGETME Repo
+<img src="./assets/logo.svg" alt="Weather-CLI" style="width:400px;height:auto;">
+
+</div>
+
+---
 - Hi, I’m @AptGetMe, the maintainer.
 - I’m interested in the QT framework apps written in both C++ or Python languages.
 - I have also tried some JavaScript, Bash, SDL framework, SFML framework and a little of everything else.  
