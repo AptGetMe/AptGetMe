@@ -127,6 +127,101 @@ done
 #    echo "$_i ${_inxiPretty[_i]}"
 #done
 
+_temperature=()
+_conditions=()
+_wind=()
+_cloudCover=()
+_humidity=()
+_pressure=()
+_locale=()
+_currentTime=()
+_observationTime=()
+_sunrise=()
+_sunset=()
+_source=()
+
+_set=""
+
+for _i in "${!_inxiPretty[@]}"
+do
+    case ${_inxiPretty[_i]} in
+        "temperature:")
+            _set="temperature"
+        ;;
+        "conditions:")
+            _set="conditions"
+        ;;
+        "wind:")
+            _set="wind"
+        ;;
+        "cloud")
+            _set="cloudCover"
+        ;;
+        "humidity:")
+            _set="humidity"
+        ;;
+        "pressure:")
+            _set="pressure"
+        ;;
+        "Locale:")
+            _set="locale"
+        ;;
+        "current")
+            _set="currentTime"
+        ;;
+        "observation")
+            _set="observationTime"
+        ;;
+        "sunrise:")
+            _set="sunrise"
+        ;;
+        "sunset:")
+            _set="sunset"
+        ;;
+        "Source:")
+            _set="source"
+        ;;
+    esac
+    case ${_set} in
+        "temperature")
+            _temperature+=("${_inxiPretty[_i]}")
+        ;;
+        "conditions")
+            _conditions+=("${_inxiPretty[_i]}")
+        ;;
+        "wind")
+            _wind+=("${_inxiPretty[_i]}")
+        ;;
+        "cloudCover")
+            _cloudCover+=("${_inxiPretty[_i]}")
+        ;;
+        "humidity")
+            _humidity+=("${_inxiPretty[_i]}")
+        ;;
+        "pressure")
+            _pressure+=("${_inxiPretty[_i]}")
+        ;;
+        "locale")
+            _locale+=("${_inxiPretty[_i]}")
+        ;;
+        "currentTime")
+            _currentTime+=("${_inxiPretty[_i]}")
+        ;;
+        "observationTime")
+            _observationTime+=("${_inxiPretty[_i]}")
+        ;;
+        "sunrise")
+            _sunrise+=("${_inxiPretty[_i]}")
+        ;;
+        "sunset")
+            _sunset+=("${_inxiPretty[_i]}")
+        ;;
+        "source")
+            _source+=("${_inxiPretty[_i]}")
+        ;;
+    esac
+done
+
 # test out ASCII art for weather results
 sunny
 
