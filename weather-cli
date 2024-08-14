@@ -83,14 +83,6 @@ echo -ne "\e[4 q"
 # while waiting for inxi cmd to exit, play ASCII animation
 while ps -p $_inxiPID >/dev/null;
 do
-    echo -en "$_green_BOLD_FG-\b"
-    sleep 0.1
-    echo -en "\\\\\b"
-    sleep 0.1
-    echo -en "|\b"
-    sleep 0.1
-    echo -en "/\b"
-    sleep 0.1
     echo -en "-\b"
     sleep 0.1
     echo -en "\\\\\b"
@@ -101,7 +93,15 @@ do
     sleep 0.1
     echo -en "-\b"
     sleep 0.1
-    echo -en "*$_colorEnd"
+    echo -en "\\\\\b"
+    sleep 0.1
+    echo -en "|\b"
+    sleep 0.1
+    echo -en "/\b"
+    sleep 0.1
+    echo -en "-\b"
+    sleep 0.1
+    echo -en "*"
 done
 # restore cursor shape back to default
 echo -ne "\e[0 q"
