@@ -70,7 +70,7 @@ trap 'rm -f $_tmpFile' EXIT
 # start "inxi" cmd in background to get weather
 # pipe output to tee command to write to tmp file
 # remove stdout 
-inxi -xxxw --force colors | tee "$_tmpFile" >/dev/null &
+inxi -xxxw | tee "$_tmpFile" >/dev/null &
 
 # save PID and setup kill signal handling
 _inxiPID=$!
