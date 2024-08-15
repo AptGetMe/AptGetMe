@@ -1,5 +1,8 @@
 #!/bin/bash
 # Weather_CLI Version 0.1 by AptGetMe 2024
+#
+# Weather icons inspired by weather underground:  https://www.wunderground.com/
+# Ascii art provide by free website:  https://www.asciiart.eu/image-to-ascii
 
 # define version
 _version="0.1"
@@ -21,42 +24,78 @@ _colorEnd="\033[m"
 # global array to hold final output to screen
 _out=()
 
-function sunny()
-{                                                        
-  _out=("$_yellow_BOLD_FG               ++               $_colorEnd"
-        "$_yellow_BOLD_FG       ++     ++++     ++       $_colorEnd"
-        "$_yellow_BOLD_FG       +++++ ++++++ +++++       $_colorEnd"
-        "$_yellow_BOLD_FG        +++++      +++++        $_colorEnd"
-        "$_yellow_BOLD_FG        ++$_orange_BOLD_FG  ;;;;;;;;$_yellow_BOLD_FG  ++        $_colorEnd"
-        "$_yellow_BOLD_FG  +++++++$_orange_BOLD_FG ;;;;;;;;;;;;$_yellow_BOLD_FG +++++++  $_colorEnd"
-        "$_yellow_BOLD_FG    ++++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++++    $_colorEnd"
-        "$_yellow_BOLD_FG      ++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++      $_colorEnd"
-        "$_yellow_BOLD_FG    ++++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++++    $_colorEnd"
-        "$_yellow_BOLD_FG  +++++++$_orange_BOLD_FG ;;;;;;;;;;;;$_yellow_BOLD_FG +++++++  $_colorEnd"
-        "$_yellow_BOLD_FG        ++$_orange_BOLD_FG  ;;;;;;;;$_yellow_BOLD_FG  ++        $_colorEnd"
-        "$_yellow_BOLD_FG        +++++      +++++        $_colorEnd"
-        "$_yellow_BOLD_FG       +++++ ++++++ +++++       $_colorEnd"
-        "$_yellow_BOLD_FG       ++     ++++     ++       $_colorEnd"
-        "$_yellow_BOLD_FG               ++               $_colorEnd")
+# sunny skies less than 10% cloud cover
+function clear()
+{
+    _out=("               *               
+                         ***              
+                  ***   *****   ***       
+                   ***************        
+                   ***  -=-=-  ***        
+             ******* -=-=-=-=-=- *******  
+               **** =-=-=-=-=-=-- ****    
+                  * =-=-=-=-=-=-= *       
+               **** =-=-=-=-=-=-- ****    
+             ******* -=-=-=-=-=- *******  
+                   ***  =-=-=  ***        
+                   ***************        
+                  ***   *****   ***       
+                         ***              
+                          *               ")               
 }
-function partly_sunny()
-{                            
-  _out=("$_yellow_BOLD_FG               ++               $_colorEnd"
-        "$_yellow_BOLD_FG       ++     ++++     ++       $_colorEnd"
-        "$_yellow_BOLD_FG       +++++ ++++++ +++++       $_colorEnd"
-        "$_yellow_BOLD_FG        +++++      ++++++       $_colorEnd"
-        "$_yellow_BOLD_FG        ++$_orange_BOLD_FG  ;;;;;;;;;$_yellow_BOLD_FG ++        $_colorEnd"
-        "$_yellow_BOLD_FG  +++++++$_orange_BOLD_FG ;;;;;;;;;;;;$_yellow_BOLD_FG +++++++  $_colorEnd"
-        "$_yellow_BOLD_FG    ++++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++++    $_colorEnd"
-        "$_yellow_BOLD_FG      ++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++      $_colorEnd"
-        "$_yellow_BOLD_FG    ++++$_orange_BOLD_FG ;;;;;;;;;;;;;;$_yellow_BOLD_FG ++++    $_colorEnd"
-        "$_yellow_BOLD_FG  +++++++$_orange_BOLD_FG ;;;;;;;;;;;;$_yellow_BOLD_FG +++++++  $_colorEnd"
-        "$_grey_BOLD_FG     ++$_white_BOLD_FG....$_grey_BOLD_FG++$_orange_BOLD_FG;;;;;;;$_yellow_BOLD_FG  ++        $_colorEnd"
-        "$_grey_BOLD_FG   ++$_white_BOLD_FG........$_grey_BOLD_FG+;++$_yellow_BOLD_FG+ ++++++       $_colorEnd"
-        "$_grey_BOLD_FG +++;$_white_BOLD_FG............$_grey_BOLD_FG++$_yellow_BOLD_FG +++++       $_colorEnd"
-        "$_grey_BOLD_FG +$_white_BOLD_FG...............$_grey_BOLD_FG:+$_yellow_BOLD_FG    ++       $_colorEnd"
-        "$_grey_BOLD_FG +;$_white_BOLD_FG.............$_grey_BOLD_FG:+              $_colorEnd"
-        "$_grey_BOLD_FG   +++++++++++++                $_colorEnd")
+
+# between 10% and 40% cloud cover
+function partlyCloudy()
+{
+    _out=("               *               
+                         ***              
+                  ***   *****   ***       
+                   ***************        
+                   ***  -=-=-  ***        
+             *******  =-=-=-=-=- *******  
+                ***  -=-=-=-=-=-= ****    
+                  * =-=-=-=-=-=-= *       
+                ***  =-=-=-=-=-=- ****    
+             ***  ====  =-=-=-=- *******  
+                =::::::===  =  ***        
+               =:.:.:.:.:.:== ****        
+             =::.:.:.:.:.:.:=    **       
+             =:.:.:.:.:::.:==             
+              =============               ")               
+}
+
+# between 40% and 70% cloud cover
+function mostlyCloudy()
+{
+    _out=("               *               
+                         ***              
+                  ***   *****   ***       
+                   ***************        
+                   ***  -=-=-  ***        
+                  ====  =-=-=-=- *******  
+                 =::::::===. =-=-= ****   
+              ==:.:.:.:::: =-=-=- *       
+             =::::::.:.: ==:::== *****    
+             =:.:. =====.::.::::== =****  
+                 ==-:::::.::.:.::====     
+               =.:::.:.:::.::::.:::::=    
+               =:.:::::.:::.:.::.:.::==   
+               =::.:.:.:.:::::.::::.:=    
+                 ===================      ")               
+
+}
+
+# greater than 70% cloud cover
+function cloudy()
+{                                                                 
+    _out=("              ===::==          
+                   =====:.:.:..:==        
+                 =:.:.:.:.:.::.:.==       
+              ====.:.:.:.:.::.:.:.:.:==   
+            ==:.:.:.:.:.:.::.:.:.:.:.:.=  
+            =.:.:.:.:..:.::.:.:.:.:.:.:=  
+            =:.:.:.:.:.:.:.:.:.:.:.:.:==  
+             =========================    ")
 }
 
 # get current date with "date" cmd and store in variable
@@ -223,9 +262,6 @@ do
         ;;
     esac
 done
-
-# test out ASCII art for weather results
-sunny
 
 # test out formating the final results
 echo -e "${_out[0]}  $_green_BOLD_FG${_inxiPretty[0]}$_colorEnd ${_inxiPretty[1]}"
