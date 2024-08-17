@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/logo.svg" alt="Weather_CLI" style="width:600px;height:auto;">
+<img src="./assets/logo.svg" alt="Weather_CLI" style="width:500px;height:auto;">
 
 ### Fun Bash Scripts  📃   Weather_CLI  ⛅  And Github Profile  🎉
 
@@ -18,14 +18,14 @@
 
 <div align="center">
 
-<img src="./assets/demo.png" alt="Weather_CLI_Demo" style="width:800px;height:auto;">
+<img src="./assets/demo.png" alt="Weather_CLI_Demo" style="width:500px;height:auto;">
 
 ### A Command Line Interface weather tool similar to [wthrr](https://github.com/ttytm/wthrr-the-weathercrab) or [wego](https://github.com/schachmat/wego) but displayed like [neofetch](https://github.com/dylanaraps/neofetch)
 
 </div>
 
 Weather_CLI aims to be an easy to use weather app that retrieves the current weather conditions and display them in a linux bash terminal.
-While Weather_CLI is pretty simple to use, please don't hesitate to check [documentation](Weather_CLI_DOC) for help installing and using Weather_CLI.
+While Weather_CLI is pretty simple to use, please don't hesitate to check [documentation](Weather_CLI_DOC.md) for help installing and using Weather_CLI.
 Currently under development, but a release may be happening soon...
   
 <!---
