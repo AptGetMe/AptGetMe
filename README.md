@@ -1,7 +1,8 @@
 <div align="center">
 
-# About the APTGETME Repo
-<img src="./assets/logo.svg" alt="Weather-CLI" style="width:400px;height:auto;">
+<img src="./assets/logo.svg" alt="Weather-CLI" style="width:600px;height:auto;">
+
+### Fun Bash Scripts  📃   Weather_CLI  ⛅  And Github Profile  🎉
 
 </div>
 
@@ -14,7 +15,7 @@
 >My plan for the future is to fill this repository with fun (and maybe useful) bash scripts.
 
 
-## Weather_CLI  ⛅
+## Weather_CLI
 A Command Line Interface **(CLI)** weather tool similar to [wthrr](https://github.com/ttytm/wthrr-the-weathercrab) or [wego](https://github.com/schachmat/wego) 
 but with a view like [neofetch](https://github.com/dylanaraps/neofetch).  It will retrieve the current weather conditions and display them in a linux bash terminal.
 
