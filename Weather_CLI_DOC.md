@@ -1,9 +1,9 @@
 <div align="center">
 
 # Weather_CLI
-<img src="./assets/Weather-CLI.svg" alt="Weather-CLI" style="width:250px;height:auto;">
+<img src="./assets/Weather-CLI.svg" alt="Weather-CLI" style="width:350px;height:auto;">
 
-A Command Line Interface **(CLI)** weather tool similar to [wthrr](https://github.com/ttytm/wthrr-the-weathercrab) or [wego](https://github.com/schachmat/wego) but with a view like [neofetch](https://github.com/dylanaraps/neofetch). 
+### A Command Line Interface **(CLI)** weather tool similar to [wthrr](https://github.com/ttytm/wthrr-the-weathercrab) or [wego](https://github.com/schachmat/wego) but with a view like [neofetch](https://github.com/dylanaraps/neofetch). 
 
 </div>
 
@@ -28,6 +28,11 @@ This file contains some instructions that should help you install and use **Weat
 - Open a regular bash terminal and navigate to the folder containing the downloaded *weather-cli* file.
 - Run script by typing in the command ```./weather-cli```
 
+<div align="center">
+
+<img src="./assets/demo.png" alt="Weather-CLI-Demo" style="width:500px;height:auto;">
+
+</div>
 
 # Development
 >[!TIP]
