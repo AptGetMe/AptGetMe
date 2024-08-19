@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/logo.svg" alt="Weather_CLI" style="width:500px;height:auto;">
+<img src="./assets/AptGetMe_Logo.svg" alt="AptGetMe_Logo" style="width:500px;height:auto;">
 
 ### Fun Bash Scripts  📃   Weather_CLI  ⛅  And Github Profile  🎉
 
@@ -18,7 +18,7 @@
 
 <div align="center">
 
-<img src="./assets/demo.png" alt="Weather_CLI_Demo" style="width:500px;height:auto;">
+<img src="./assets/Weather_CLI_Demo.png" alt="Weather_CLI_Demo" style="width:500px;height:auto;">
 
 ### A Command Line Interface weather tool similar to [wthrr](https://github.com/ttytm/wthrr-the-weathercrab) or [wego](https://github.com/schachmat/wego) but displayed like [neofetch](https://github.com/dylanaraps/neofetch)
 
