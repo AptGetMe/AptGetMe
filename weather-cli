@@ -95,7 +95,14 @@ function cloudy()
           "  ==:.:.:.:.:.:.:.:.:.:.:.:.=  "
           "  =.:.:.:.:..:.:.:.:.:.:.:.:=  "
           "  =:.:.:.:.:.:.:.:.:.:.:.:.==  "
-          "   ========================    ")
+          "   ========================    "
+          "                               "
+          "                               "
+          "                               "
+          "                               "
+          "                               "
+          "                               "
+          "                               ")
 }
 
 # get current date with "date" cmd and store in variable
@@ -145,7 +152,7 @@ done
 # restore cursor shape back to default
 echo -ne "\e[0 q"
 
-echo -e "     $_green_BOLD_FG Finished Success! $_colorEnd \n"
+echo -e "          $_green_BOLD_FG Finished Success! $_colorEnd \n"
 
 # read inxi weather results from tmpFile, deliminate on spaces
 mapfile -d ' ' _inxiRaw < "$_tmpFile"
