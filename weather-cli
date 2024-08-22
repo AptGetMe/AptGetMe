@@ -273,7 +273,7 @@ done
 _conditionsStr=${_conditions[*]:1}
 case ${_conditionsStr} in
     "clear sky")
-        sunny
+        clear
     ;;
     "few clouds" | "scattered clouds")
         partlyCloudy
