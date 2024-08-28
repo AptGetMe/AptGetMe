@@ -30,6 +30,7 @@ _out=()
 # sunny skies less than 10% cloud cover
 function clear()
 {
+    if [ $_dayTime = 'true' ]; then
     _out=("$_yellow_BOLD_FG               *               $_colorEnd"
           "$_yellow_BOLD_FG              ***              $_colorEnd"
           "$_yellow_BOLD_FG       ***   *****   ***       $_colorEnd"
@@ -45,11 +46,29 @@ function clear()
           "$_yellow_BOLD_FG       ***   *****   ***       $_colorEnd"
           "$_yellow_BOLD_FG              ***              $_colorEnd"
           "$_yellow_BOLD_FG               *               $_colorEnd")
+    else
+    _out=("           x                   "
+          "       xxxxx                   "
+          "     xx;;:xx                   "
+          "    x;:;:;;x                   "
+          "   x;:;:;:;x                   "
+          "  x;:;:;:;:;x                  "
+          "  x;:;:;:;:;:x                 "
+          "  x;:;:;:;:;;:xx               "
+          "  x;:;:;:;:;:;;:xx             "
+          "  xx;:;:;:;:;:;:;:;xxxx     x  "
+          "   x;:;:;:;:;:;:;:;:;;:;:;:xx  "
+          "    xx;:;:;:;:;:;:;:;:;:;:x.   "
+          "      xx;:;:;:;:;:;:;:;:xx     "
+          "        xxx;:;:;:;:;:xxx       "
+          "            +xxxxxx            ")
+    fi
 }
 
 # between 10% and 40% cloud cover
 function partlyCloudy()
 {
+    if [ $_dayTime = 'true' ]; then
     _out=("$_yellow_BOLD_FG               *               $_colorEnd"
           "$_yellow_BOLD_FG              ***              $_colorEnd"
           "$_yellow_BOLD_FG       ***   *****   ***       $_colorEnd"
@@ -64,12 +83,30 @@ function partlyCloudy()
           "$_grey_BOLD_FG    =$_white_BOLD_FG:.:.:.:.:.:$_grey_BOLD_FG==$_yellow_BOLD_FG ****        $_colorEnd"
           "$_grey_BOLD_FG  =$_white_BOLD_FG::.:.:.:.:.:.:$_grey_BOLD_FG=$_yellow_BOLD_FG    **       $_colorEnd"
           "$_grey_BOLD_FG  =$_white_BOLD_FG:.:.:.:.:::.:$_grey_BOLD_FG==             $_colorEnd"
-          "$_grey_BOLD_FG   =============               $_colorEnd")               
+          "$_grey_BOLD_FG   =============               $_colorEnd")
+    else
+    _out=("            +                  "
+          "         xx;x                  "
+          "       x+;;:x                  "
+          "     xx;;:;;x                  "
+          "    .x;:;;:;xx                 "
+          "    x;;;:;;;;xx                "
+          "    x;:;;:;:;;xx               "
+          "    x;;:;;:;:;;;xx             "
+          "    x;:;:.;;;:;:;;;xx          "
+          "      ======= ;;:;;;;;;;xxxxx  "
+          "     =:.:.:.:====  :;:;:;;xx   "
+          "   ==.:.:.:..:.:.== ;;:;;x     "
+          "  =:.:.:.:.:.:.:.:= ;xxx       "
+          "  =.:.:.:.:.:.:.:==            "
+          "    ============               ")
+    fi
 }
 
 # between 40% and 70% cloud cover
 function mostlyCloudy()
 {
+    if [ $_dayTime = 'true' ]; then
     _out=("$_yellow_BOLD_FG               *               $_colorEnd"
           "$_yellow_BOLD_FG              ***              $_colorEnd"
           "$_yellow_BOLD_FG       ***   *****   ***       $_colorEnd"
@@ -85,7 +122,23 @@ function mostlyCloudy()
           "$_grey_BOLD_FG    =$_white_BOLD_FG:.:.:.:.:.:.:.::.:.::$_grey_BOLD_FG==   $_colorEnd"
           "$_grey_BOLD_FG    =$_white_BOLD_FG::.:.:.:.:.:.:.:.::.:$_grey_BOLD_FG=    $_colorEnd"
           "$_grey_BOLD_FG      ===================      $_colorEnd")               
-
+    else
+    _out=("                x              "               
+          "             xx;x              "               
+          "           :x;;:x              "               
+          "          .x;:;;x+             "               
+          "          x;;;:;;x             "               
+          "       :===  :;:;;xx           "               
+          "     ==:.:.:== ;;:;;;xx        "               
+          "    =..:.:.:.:.:= ;:;;;;;;++x  "               
+          "  =::.:.:.:.  :===  ;:;:;:xx   "               
+          "  =.:.:  ====:.:.:.== ;xxx     "              
+          "   ==  ==:.:..:.:.:.===        "              
+          "    ==:.:.:.:.:.:.:.:.:.=      "              
+          "   ==.:..:.:.:.:.:.:.:.:==     "              
+          "    =:.:.:..:.:.:.:.:.:.=      "              
+          "      =================        ")
+    fi
 }
 
 # greater than 70% cloud cover
