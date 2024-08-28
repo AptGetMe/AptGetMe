@@ -7,6 +7,9 @@
 # define version
 _version="0.1"
 
+# global flag for daytime or nighttime
+_dayTime=true
+
 # define global colors
 _yellow_BOLD_FG="\033[1;38;5;226m"
 _orange_BOLD_FG="\033[1;38;5;214m"
@@ -269,6 +272,15 @@ do
         ;;
     esac
 done
+
+# determine if it is daytime or nighttime based on returned
+# sunrise and sunset times
+if [ "$(date +%s)" -ge "$(date -d "${_sunrise[1]}" +%s)" ] && [ "$(date +%s)" -le "$(date -d "${_sunset[1]}" +%s)" ]; then
+    _dayTime=true
+else
+    _dayTime=false
+fi
+echo "$_dayTime"
 
 _conditionsStr=${_conditions[*]:1}
 case ${_conditionsStr} in
