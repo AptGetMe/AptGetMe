@@ -335,8 +335,71 @@ if [ "$(date +%s)" -ge "$(date -d "${_sunrise[1]}" +%s)" ] && [ "$(date +%s)" -l
 else
     _dayTime=false
 fi
-echo "$_dayTime"
 
+# few clouds
+# scattered clouds
+# broken clouds
+# overcast clouds
+
+# drizzle
+# drizzle rain
+# light intensity drizzle
+# heavy intensity drizzle
+# light intensity drizzle rain
+# heavy intensity drizzle rain
+# shower drizzle
+# shower rain and drizzle
+# heavy shower rain and drizzle
+
+# rain
+# light rain
+# moderate rain
+# heavy intensity rain
+# very heavy rain
+# extreme rain
+# freezing rain
+# shower rain
+# light intensity shower rain
+# heavy intensity shower rain
+# ragged shower rain
+
+# thunderstorm
+# light thunderstorm
+# heavy thunderstorm
+# ragged thunderstorm
+# thunderstorm with rain
+# thunderstorm with light rain
+# thunderstorm with heavy rain
+# thunderstorm with drizzle
+# thunderstorm with light drizzle
+# thunderstorm with heavy drizzle
+
+# snow
+# light snow
+# heavy snow
+# rain and snow
+# light rain and snow
+# shower snow
+# light shower snow
+# heavy shower snow 
+# sleet
+# shower sleet
+# light shower sleet
+
+# mist
+# smoke
+# haze
+# sand/dust whirls
+# fog
+# sand
+# dust
+# volcanic ash
+# squalls
+# tornado
+
+# basic logic to pick correct weather icon image
+# from the current weather conditions from inxi
+# clear sky
 _conditionsStr=${_conditions[*]:1}
 case ${_conditionsStr} in
     "clear sky")
@@ -353,7 +416,16 @@ case ${_conditionsStr} in
     ;;
 esac
 
-# test out formating the final results
+# debug code to test all weather conditions combinations
+# uncomment desired lines
+#_dayTime=true
+#_dayTime=false
+#clear
+#partlyCloudy
+#mostlyCloudy
+#cloudy
+
+# print out the final results
 echo -e "${_out[0]}  $_green_BOLD_FG${_inxiPretty[0]}$_colorEnd ${_inxiPretty[1]}"
 echo -e "${_out[1]}  ----------------"
 echo -e "${_out[2]}  $_green_BOLD_FG${_temperature[0]}$_colorEnd ${_temperature[3]} ${_temperature[4]}"
