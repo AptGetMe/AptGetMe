@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/AptGetMe_Logo.svg" alt="AptGetMe_Logo" style="width:800px;height:auto;">
+<img src="./AptGetMe_Logo.svg" alt="AptGetMe_Logo" style="width:800px;height:auto;">
 
 ### Fun Bash Scripts  📃  Github Profile  🎉
 
