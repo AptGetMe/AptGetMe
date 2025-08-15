@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="./assets/AptGetMe_Logo.svg" alt="AptGetMe_Logo" style="width:500px;height:auto;">
+<img src="./assets/AptGetMe_Logo.svg" alt="AptGetMe_Logo" style="width:800px;height:auto;">
 
-### Fun Bash Scripts  📃   Weather_CLI  ⛅  And Github Profile  🎉
+### Fun Bash Scripts  📃  Github Profile  🎉
 
 </div>
 
@@ -12,22 +12,12 @@
 - I have also tried some JavaScript, Bash, SDL framework, SFML framework and a little of everything else.  
 
 >[!NOTE]   
->My plan for the future is to fill this repository with fun (and maybe useful) bash scripts.
+>I'm going to update my profile page, because it's been a year, and things have changed!
 
 # Weather_CLI  ⛅
+If you're here looking for Weather_CLI, it's all grown up and moved into it's own repo!
+*Check it out!*  [Climafetch](https://github.com/AptGetMe/Climafetch)
 
-<div align="center">
-
-<img src="./assets/Weather_CLI_Demo.png" alt="Weather_CLI_Demo" style="width:500px;height:auto;">
-
-### A Command Line Interface weather tool similar to [wthrr](https://github.com/ttytm/wthrr-the-weathercrab) or [wego](https://github.com/schachmat/wego) but displayed like [neofetch](https://github.com/dylanaraps/neofetch)
-
-</div>
-
-Weather_CLI aims to be an easy to use weather app that retrieves the current weather conditions and display them in a linux bash terminal.
-While Weather_CLI is pretty simple to use, please don't hesitate to check [documentation](Weather_CLI_DOC.md) for help installing and using Weather_CLI.
-Currently under development, but a release may be happening soon...
-  
 <!---
 AptGetMe/AptGetMe is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
