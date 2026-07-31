@@ -29,6 +29,9 @@ If you're here looking for Weather_CLI, it's all grown up and moved into it's ow
 # Oak Video Editor  (formerly Olive Video Editor) 🎥
 A brand-new fork of the Olive Video Editor under development!  *Check it out!*  [Oak](https://github.com/OakVideoEditorCommunity/oak)
 
+# Pulsar Code Editor Jetbrains Syntax Theme
+Right now, I'm focusing a lot on a syntax theme for Pulsar (formally Atom).  It's a carefully crafted theme based on Jetbrains comfortable syntax highlighting.  *Try it out if you'd like!*  [Theme Jetbrains](https://packages.pulsar-edit.dev/packages/theme-jetbrains-syntax) 
+
 <!---
 AptGetMe/AptGetMe is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
